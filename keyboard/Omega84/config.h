@@ -107,7 +107,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // 按键阵列配置
 #define MATRIX_ROWS 5 /* 硬件阵列行数 */
-#define MATRIX_COLS 12 /* 硬件阵列列数 */
+#define MATRIX_COLS 16 /* 硬件阵列列数 */
 
 /* key combination for command */
 #define IS_COMMAND() ( \
