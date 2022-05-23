@@ -81,8 +81,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // 3灯指示配置引脚
 #define LED_STATUS_BLE 7
-#define LED_STATUS_USB 6
-//#define LED_STATUS_CHARGING 5
+//#define LED_STATUS_USB 6
+#define LED_STATUS_CHARGING 6
 //#define LED_BLE_CHANNEL1 7
 //#define LED_BLE_CHANNEL2 6
 //#define LED_BLE_CHANNEL3 5
@@ -102,19 +102,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BATTERY_ADC_PIN NRF_SAADC_INPUT_AIN0 // 电量检测引脚 Pin 2
 
 // 充电检测配置
-//#define PIN_CHARGING !UCC1
-//#define PIN_STANDBY !UCC2
+#define PIN_CHARGING !UCC1
+#define PIN_STANDBY !UCC2
 
 // 按键阵列配置
-#define MATRIX_ROWS 9 /* 硬件阵列行数 */
-#define MATRIX_COLS 10 /* 硬件阵列列数 */
+#define MATRIX_ROWS 5 /* 硬件阵列行数 */
+#define MATRIX_COLS 12 /* 硬件阵列列数 */
 
 /* key combination for command */
 #define IS_COMMAND() ( \
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)))
 
-static const uint8_t row_pin_array[MATRIX_ROWS] = { 26, 30, 29, 28, 27, 12, 13, 14, 15 };
-static const uint8_t column_pin_array[MATRIX_COLS] = { 23, 22, 21, 24, 25, 16, 17, 20, 19, 18 };
+static const uint8_t row_pin_array[MATRIX_ROWS] = { 20, 19, 16, 17, 18 };
+static const uint8_t column_pin_array[MATRIX_COLS] = { 27, 26, 30, 29, 28, 25, 24, 23, 22, 21, 15, 14, 13, 12, 11, 10 };
 #define ROW_IN // 键盘阵列的二极管方向是从COL->ROW
 
 /* define if matrix has ghost */
