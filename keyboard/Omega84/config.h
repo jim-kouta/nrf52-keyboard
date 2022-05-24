@@ -1,19 +1,4 @@
 /*
-Copyright 2012 Jun Wako <wakojun@gmail.com>
-Copyright 2019 Jim Jiang <jim@lotlab.org>
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #pragma once
@@ -25,8 +10,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT_ID 0x0514 /* USB PID */
 #define CONF_VENDOR_ID 0x4366 /* 配置项目内显示的VendorID */
 #define CONF_PRODUCT_ID 0x0318 /* 配置项目内显示的ProductID */
-#define DEVICE_VER 0x0000 /* 硬件版本 */
-#define MANUFACTURER "Jim" /* 硬件制造商，用于蓝牙显示 */
+#define DEVICE_VER 0x0001 /* 硬件版本 */
+#define MANUFACTURER "jim" /* 硬件制造商，用于蓝牙显示 */
 #define PRODUCT "Jis-KB" /* 硬件名词，用于蓝牙显示 */
 #define MACADDR_SEPRATOR ' ' /* 蓝牙名称后地址的分隔符。若不设置则不显示蓝牙名称后面的地址 */
 
@@ -45,7 +30,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KEYBOARD_FAST_SCAN_INTERVAL 10 // 通常模式下，多久扫描一次键盘 (ms)
 #define KEYBOARD_SLOW_SCAN_INTERVAL 100 // 慢速模式下，多久扫描一次键盘 (ms)
 #define LED_AUTOOFF_TIME 5 /* LED自动熄灭时长(s)，设为0则不自动熄灭 */
-#define DCDC_ENABLED //启用DCDC电源模式
 
 // 键盘额外功能
 //#define DYNAMIC_TX_POWER /* 启用自动发射功率调整 */
@@ -70,7 +54,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // LED 配置
 #define LED_CAPS 5
-#define NUM_CAPS 4
+#define LED_NUM 4
 
 // ws2812 RGB 配置
 //#define RGB_DI_PIN 10
@@ -81,8 +65,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // 3灯指示配置引脚
 #define LED_STATUS_BLE 7
-//#define LED_STATUS_USB 6
-#define LED_STATUS_CHARGING 6
+#define LED_STATUS_USB 6
+//#define LED_STATUS_CHARGING 6
 //#define LED_BLE_CHANNEL1 7
 //#define LED_BLE_CHANNEL2 6
 //#define LED_BLE_CHANNEL3 5
